@@ -36,10 +36,13 @@ pipeline{
             steps{
                 
                 
-                    
-                    sh 'mvn clean package'
-                
+                    withMaven(globalMavenSettingsConfig: '--- Use system default settings or file path ---', jdk: '--- Use system default JDK ---', maven: 'Maven-3.8.7', mavenSettingsConfig: '--- Use system default settings or file path ---') {
+ 
+                      sh 'mvn clean package'
+                    }
             }
+                
+            
         }
 
     }
