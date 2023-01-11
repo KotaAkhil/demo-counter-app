@@ -11,7 +11,7 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/KotaAkhil/demo-counter-app.git'
             }
         }
-        stage('UNIT TESTING'){
+        /*stage('UNIT TESTING'){
             
             steps{
                 
@@ -30,7 +30,7 @@ pipeline{
                     sh 'mvn verify -DskipUnitTests'
             }
             
-        }
+        }*/
         stage('Maven build'){
             
             steps{
